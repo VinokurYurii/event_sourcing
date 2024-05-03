@@ -1,5 +1,7 @@
 # README
 
+![CI](https://github.com/VinokurYurii/event_sourcing/actions/workflows/ci.yml/badge.svg)
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
