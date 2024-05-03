@@ -16,5 +16,9 @@ Style/Documentation:
 Metrics/MethodLength:
   Exclude:
     - 'db/**/*'
+    - 'spec/**/*'
 Style/ClassAndModuleChildren:
   Enabled: false
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'

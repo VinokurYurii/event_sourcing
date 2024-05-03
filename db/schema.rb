@@ -15,10 +15,12 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_03_135820) do
   enable_extension "plpgsql"
 
   create_table "application_events", force: :cascade do |t|
+    t.bigint "application_id"
     t.string "type", null: false
     t.json "properties"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["application_id"], name: "index_application_events_on_application_id"
   end
 
   create_table "applications", force: :cascade do |t|
