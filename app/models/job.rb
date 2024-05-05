@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class Job < ActiveRecord::Base
+  ACTIVATED_EVENT = 'Job::Event::Activated'
+
   has_many :job_events, class_name: 'Job::Event'
   has_many :applications
 
@@ -9,6 +11,6 @@ class Job < ActiveRecord::Base
   def active?
     return false unless job_events.present?
 
-    job_events.last.type == 'Job::Event::Activated'
+    job_events.last.type == ACTIVATED_EVENT
   end
 end

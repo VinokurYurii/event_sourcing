@@ -22,3 +22,6 @@ Style/ClassAndModuleChildren:
 Metrics/BlockLength:
   Exclude:
     - 'spec/**/*'
+Naming/VariableNumber:
+  Exclude:
+    - 'db/seeds.rb'
