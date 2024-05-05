@@ -12,6 +12,18 @@ module ControllerHelpers
       }
     end
   end
+
+  def jobs_to_hashes(jobs)
+    jobs.map do |job|
+      {
+        title: job.title,
+        status: job.status,
+        hired: job.hired,
+        rejected: job.rejected,
+        ongoing: job.ongoing
+      }
+    end
+  end
 end
 
 RSpec.configure do |config|

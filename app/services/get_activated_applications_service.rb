@@ -39,7 +39,7 @@ class GetActivatedApplicationsService
     def join_last_event_sql
       <<-SQL
         LEFT JOIN (
-            SELECT *, ROW_NUMBER() OVER (PARTITION BY application_id ORDER BY created_at DESC) AS rn
+            SELECT *, ROW_NUMBER() OVER (PARTITION BY application_id ORDER BY id DESC) AS rn
             FROM application_events ae_window
             WHERE ae_window.type != '#{NOTE_EVENT}'
         ) AS numbered_events
