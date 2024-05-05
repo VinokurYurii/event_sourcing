@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 
 ruby '3.2.2'
 
+gem 'active_model_serializers', '~> 0.10.2'
 gem 'bootsnap', require: false
 gem 'dotenv-rails'
 gem 'pg', '~> 1.1'
