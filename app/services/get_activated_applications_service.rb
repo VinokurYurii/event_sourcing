@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class GetActiveJobApplicationsService
+class GetActivatedApplicationsService
   ACTIVATED_EVENT = 'Job::Event::Activated'
   INTERVIEW_EVENT = 'Application::Event::Interview'
   HIRED_EVENT = 'Application::Event::Hired'
@@ -17,7 +17,6 @@ class GetActiveJobApplicationsService
         .joins(:job)
         .where(jobs: { id: activated_job_ids })
         .group('applications.id, job_title, numbered_events.type')
-        .to_a
     end
 
     private
